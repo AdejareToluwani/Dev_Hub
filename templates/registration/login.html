@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+login {% endblock %}
+
+{% block body %}
+
+
+
+<div class="container-fluid py-5">
+
+    <div class="container justify-content-center mt-5 ">
+
+        <div class="row py-3">
+            <div class="col-lg-3">
+
+            </div>
+            <div class="col-lg-6">
+
+                <h3 class="text-light">Login</h3>
+
+                <form method="POST" action="/login">
+
+                    <div class="form-floating">
+                        {% csrf_token %}
+                        <i class="text-danger icon fa-solid fa-user-tie fa-lg"></i>
+                        <input type="text" class="form-control mb-3" placeholder="username" id="name" name="username">
+                        <label for="name">Username</label>
+                    </div>
+
+                    <div class="form-floating">
+                        <i class="icon text-danger fa-solid fa-eye fa-lg"></i>
+                        <input type="password" class="form-control mb-3" placeholder="username" id="pass"
+                            name="password">
+                        <label for="pass">password</label>
+                    </div>
+
+                    <input type="submit" class="btn-sm btn-outline-primary px-3">
+                </form>
+                <hr class="text-danger">
+                <small class="text-muted">dont have an account? <span><a href="#"
+                            class="btn-sm btn-outline-success text-decoration-none">Signup</a></span></small>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

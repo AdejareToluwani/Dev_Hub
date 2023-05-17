@@ -1,0 +1,51 @@
+{% extends 'userbase.html' %}
+
+
+{% block title %} user_settings {% endblock %}
+
+
+{% block body %}
+
+
+<section class=" py-5">
+
+    <div class="container py-5 ">
+
+        <div class="row">
+
+
+            <div class="col-lg-6 me-5">
+                <form method="POST" action="" enctype="multipart/form-data ">
+                    {% csrf_token %}
+
+                    {{form.last_name}}
+
+
+                    <br>
+                    {{form.img}}
+                    <br>
+                    {{form.bio}}
+                    <br>
+                    {{form.location}}<br>
+
+                    <input type="submit" class="btn-sm btn-outline-success px-3" value="post">
+                </form>
+
+            </div>
+
+
+            <div class="col-lg-3 bg-dark">
+                <h3>hy</h3>
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+</section>
+
+
+{% endblock %}
